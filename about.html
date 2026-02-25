@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NeuroVision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"] },
+          colors: {
+            nv: {
+              blue: "#2A5AFF",
+              ink: "#0B1220",
+              muted: "#667085",
+              border: "#E5E7EB",
+              bg: "#F7F8FB",
+              card: "#FFFFFF",
+            },
+          },
+          borderRadius: { nv: "16px" },
+          boxShadow: {
+            nv: "0 18px 60px rgba(16, 24, 40, 0.10)",
+            nvSoft: "0 6px 24px rgba(16, 24, 40, 0.08)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .nv-sticky { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="bg-white text-nv-ink">
+  <!-- Header -->
+  <header class="nv-sticky sticky top-0 z-50 border-b border-nv-border bg-white/80">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-9 w-9 overflow-hidden rounded-full bg-nv-blue/10 ring-2 ring-nv-blue/80">
+          <img src="logo.jpeg" alt="NeuroVision logo" class="h-full w-full object-cover" onerror="this.style.display='none';" />
+        </div>
+        <div class="leading-tight">
+          <div class="text-lg font-extrabold tracking-tight">NeuroVision</div>
+          <div class="-mt-0.5 text-xs font-medium text-nv-muted">Predictive Design Intelligence</div>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-7 md:flex">
+        <a href="index.html" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Home</a>
+        <a href="index.html#product" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Product</a>
+        <a href="index.html#pricing" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Pricing</a>
+        <a href="about.html" class="text-sm font-semibold text-nv-ink" aria-current="page">About</a>
+        <a href="index.html#demo" class="rounded-full bg-nv-blue px-5 py-2.5 text-sm font-semibold text-white hover:bg-nv-blue/90">Try NeuroVision</a>
+      </nav>
+      <a href="index.html#product" class="md:hidden rounded-full border border-nv-border px-4 py-2 text-sm font-semibold">Menu</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- About hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-indigo-50 via-white to-white"></div>
+      <div class="mx-auto max-w-6xl px-6 pb-14 pt-14 md:pb-20 md:pt-20">
+        <div class="max-w-3xl">
+          <div class="text-sm font-semibold text-nv-blue">About</div>
+          <h1 class="mt-2 text-4xl font-extrabold tracking-tight md:text-5xl">
+            NeuroVision turns design guesswork into behavior-modeled decisions.
+          </h1>
+          <p class="mt-5 text-base leading-relaxed text-nv-muted md:text-lg">
+            NeuroVision is a predictive cognitive modeling platform for design evaluation and optimization.
+            Upload a visual stimulus (ad, landing page, packaging, product visual), and NeuroVision predicts early attention,
+            simulates how different audiences interpret the stimulus, and generates improved design variants aligned with
+            evidence-based UX principles.
+          </p>
+        </div>
+
+        <!-- What we do cards -->
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div class="rounded-nv border border-nv-border bg-white p-6 shadow-nvSoft">
+            <div class="text-sm font-semibold text-nv-blue">Predict attention</div>
+            <div class="mt-2 text-lg font-bold">First seconds clarity</div>
+            <p class="mt-3 text-sm text-nv-muted">Identify hierarchy, competing elements, overloaded areas, and first-fixation probabilities.</p>
+          </div>
+          <div class="rounded-nv border border-nv-border bg-white p-6 shadow-nvSoft">
+            <div class="text-sm font-semibold text-nv-blue">Simulate interpretation</div>
+            <div class="mt-2 text-lg font-bold">Meaning across contexts</div>
+            <p class="mt-3 text-sm text-nv-muted">Model trust, message understanding, brand fit, and cultural framing across regions/personas.</p>
+          </div>
+          <div class="rounded-nv border border-nv-border bg-white p-6 shadow-nvSoft">
+            <div class="text-sm font-semibold text-nv-blue">Generate & adapt</div>
+            <div class="mt-2 text-lg font-bold">Variants you can ship</div>
+            <p class="mt-3 text-sm text-nv-muted">Produce improved variants, resize across platforms, and create from scratch when needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team section -->
+    <section id="team" class="bg-nv-bg">
+      <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="max-w-3xl">
+          <div class="text-sm font-semibold text-nv-blue">Company</div>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">The Team Behind NeuroVision</h2>
+          <p class="mt-4 text-base text-nv-muted md:text-lg">Meet the people building the future of design intelligence.</p>
+        </div>
+
+        <!-- Team grid -->
+        <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Person 01 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-01.jpg" alt="Person 01" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 01</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">CEO & Co-founder</div>
+            </div>
+          </div>
+
+          <!-- Person 02 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-02.jpg" alt="Person 02" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 02</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">CTO & Co-founder</div>
+            </div>
+          </div>
+
+          <!-- Person 03 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-03.jpg" alt="Person 03" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 03</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">Head of Research</div>
+            </div>
+          </div>
+
+          <!-- Person 04 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-04.jpg" alt="Person 04" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 04</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">Product Lead</div>
+            </div>
+          </div>
+
+          <!-- Person 05 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-05.jpg" alt="Person 05" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 05</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">ML Research Engineer</div>
+            </div>
+          </div>
+
+          <!-- Person 06 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-06.jpg" alt="Person 06" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 06</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">UX Research Lead</div>
+            </div>
+          </div>
+
+          <!-- Person 07 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-07.jpg" alt="Person 07" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 07</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">Partnerships</div>
+            </div>
+          </div>
+
+          <!-- Person 08 -->
+          <div class="rounded-nv border border-nv-border bg-white p-5 shadow-nvSoft">
+            <div class="aspect-square overflow-hidden rounded-2xl bg-nv-bg">
+              <img src="assets/team/person-08.jpg" alt="Person 08" class="h-full w-full object-cover" loading="lazy" onerror="this.src='assets/placeholder-person.jpg';" />
+            </div>
+            <div class="mt-4">
+              <div class="text-base font-semibold tracking-tight text-nv-ink">Person 08</div>
+              <div class="mt-1 text-sm font-medium text-nv-muted">Operations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-nv-border bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-10">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row">
+          <div>
+            <div class="text-lg font-extrabold">NeuroVision</div>
+            <div class="mt-2 text-sm text-nv-muted">Built on science. Designed for clarity.</div>
+          </div>
+          <div class="flex flex-wrap gap-6 text-sm font-semibold text-nv-ink/80">
+            <a class="hover:underline" href="index.html#product">Product</a>
+            <a class="hover:underline" href="index.html#pricing">Pricing</a>
+            <a class="hover:underline" href="about.html">About</a>
+          </div>
+        </div>
+        <div class="mt-8 text-xs text-nv-muted">&copy; <span id="nvYear"></span> NeuroVision Technologies</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("nvYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
