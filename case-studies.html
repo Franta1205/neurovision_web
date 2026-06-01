@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies — NeuroVision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"] },
+          colors: {
+            nv: {
+              blue: "#2A5AFF",
+              ink: "#0B1220",
+              muted: "#667085",
+              border: "#E5E7EB",
+              bg: "#F7F8FB",
+              card: "#FFFFFF",
+            },
+          },
+          borderRadius: { nv: "16px" },
+          boxShadow: {
+            nv: "0 18px 60px rgba(16, 24, 40, 0.10)",
+            nvSoft: "0 6px 24px rgba(16, 24, 40, 0.08)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .nv-sticky { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="bg-white text-nv-ink">
+  <!-- Header -->
+  <header class="nv-sticky sticky top-0 z-50 border-b border-nv-border bg-white/80">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-9 w-9 overflow-hidden rounded-xl">
+          <img src="logo.webp" alt="NeuroVision logo" class="h-full w-full object-cover" onerror="this.style.display='none';" />
+        </div>
+        <div class="leading-tight">
+          <div class="text-lg font-extrabold tracking-tight">NeuroVision</div>
+          <div class="-mt-0.5 text-xs font-medium text-nv-muted">Predictive Design Intelligence</div>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-7 md:flex">
+        <a href="index.html" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Home</a>
+        <a href="index.html#product" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Product</a>
+        <a href="index.html#pricing" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">Pricing</a>
+        <a href="about.html" class="text-sm font-semibold text-nv-ink/80 hover:text-nv-ink">About</a>
+        <a href="index.html#demo" class="rounded-full bg-nv-blue px-5 py-2.5 text-sm font-semibold text-white hover:bg-nv-blue/90">Try NeuroVision</a>
+      </nav>
+      <a href="index.html#product" class="md:hidden rounded-full border border-nv-border px-4 py-2 text-sm font-semibold">Menu</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-indigo-50 via-white to-white"></div>
+      <div class="mx-auto flex max-w-6xl flex-col items-center px-6 py-32 text-center md:py-44">
+        <div class="text-sm font-semibold text-nv-blue">Case Studies</div>
+        <h1 class="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">Coming Soon</h1>
+        <p class="mt-5 max-w-lg text-base leading-relaxed text-nv-muted md:text-lg">We're preparing real-world case studies showcasing how NeuroVision helps teams optimize designs with predictive intelligence.</p>
+        <a href="index.html" class="mt-8 inline-flex items-center justify-center rounded-full bg-nv-blue px-6 py-3 text-sm font-semibold text-white shadow-nvSoft hover:bg-nv-blue/90">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-nv-border bg-white">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <div class="text-xs text-nv-muted">&copy; <span id="nvYear"></span> NeuroVision Technologies</div>
+    </div>
+  </footer>
+  <script>document.getElementById("nvYear").textContent = new Date().getFullYear();</script>
+</body>
+</html>
