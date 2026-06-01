@@ -122,45 +122,93 @@
                   <!-- Heatmap overlay -->
                   <div id="heroOverlayAttention" class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
                     <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute" style="width:45%;height:35%;top:5%;left:50%;background:radial-gradient(ellipse,rgba(255,0,0,0.6) 0%,rgba(255,165,0,0.3) 50%,transparent 70%);"></div>
-                    <div class="absolute" style="width:50%;height:30%;top:30%;left:25%;background:radial-gradient(ellipse,rgba(255,80,0,0.5) 0%,rgba(255,200,0,0.2) 50%,transparent 70%);"></div>
-                    <div class="absolute" style="width:35%;height:25%;bottom:10%;left:5%;background:radial-gradient(ellipse,rgba(255,255,0,0.5) 0%,rgba(255,165,0,0.2) 50%,transparent 70%);"></div>
-                    <div class="absolute" style="width:30%;height:20%;bottom:5%;right:10%;background:radial-gradient(ellipse,rgba(0,200,0,0.3) 0%,transparent 60%);"></div>
+                    <img src="assets/hero-heatmap.png" alt="Attention heatmap" class="absolute inset-0 w-full h-full object-cover mix-blend-screen" />
                     <div class="absolute top-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-semibold text-white">Attention Heatmap</div>
                   </div>
 
                   <!-- Survey overlay -->
-                  <div id="heroOverlaySurvey" class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
-                    <div class="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
-                    <div class="relative w-[85%] space-y-3 rounded-xl bg-white p-5 shadow-lg border border-nv-border">
-                      <div class="text-xs font-semibold text-nv-blue">Audience Interpretation Survey</div>
-                      <div class="text-sm font-bold text-nv-ink">How does this ad make you feel?</div>
-                      <div class="space-y-2">
-                        <div class="flex items-center justify-between rounded-lg bg-nv-bg px-3 py-2 text-xs"><span class="text-nv-ink font-medium">Trust & reliability</span><div class="h-2 w-24 rounded-full bg-nv-border overflow-hidden"><div class="h-full rounded-full bg-nv-blue" style="width:82%"></div></div><span class="text-nv-muted ml-2">82%</span></div>
-                        <div class="flex items-center justify-between rounded-lg bg-nv-bg px-3 py-2 text-xs"><span class="text-nv-ink font-medium">Innovation & future</span><div class="h-2 w-24 rounded-full bg-nv-border overflow-hidden"><div class="h-full rounded-full bg-nv-blue" style="width:91%"></div></div><span class="text-nv-muted ml-2">91%</span></div>
-                        <div class="flex items-center justify-between rounded-lg bg-nv-bg px-3 py-2 text-xs"><span class="text-nv-ink font-medium">Message clarity</span><div class="h-2 w-24 rounded-full bg-nv-border overflow-hidden"><div class="h-full rounded-full bg-nv-blue" style="width:74%"></div></div><span class="text-nv-muted ml-2">74%</span></div>
-                        <div class="flex items-center justify-between rounded-lg bg-nv-bg px-3 py-2 text-xs"><span class="text-nv-ink font-medium">Brand recall</span><div class="h-2 w-24 rounded-full bg-nv-border overflow-hidden"><div class="h-full rounded-full bg-nv-blue" style="width:68%"></div></div><span class="text-nv-muted ml-2">68%</span></div>
+                  <div id="heroOverlaySurvey" class="absolute inset-0 flex items-start justify-center transition-opacity duration-300 opacity-0 pointer-events-none overflow-y-auto">
+                    <div class="absolute inset-0 bg-[#F4F6FA]/95 backdrop-blur-sm"></div>
+                    <div class="relative w-[92%] my-3 space-y-2">
+
+                      <!-- Survey card header (like Card + collapsed survey) -->
+                      <div class="rounded-xl border border-[#D5DAE4] bg-white p-4">
+                        <div class="flex items-center justify-between">
+                          <div>
+                            <div class="flex items-center gap-2">
+                              <span class="text-xs font-medium text-[#1A1D26]">Zephyr Vision — Brand Check</span>
+                              <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-medium bg-[#3D8B6E]/10 text-[#3D8B6E]">COMPLETED</span>
+                            </div>
+                            <p class="mt-1 text-[10px] text-[#8E94A4]">Brand Perception · Germany · 2500/2500 respondents · 5/28/2026</p>
+                          </div>
+                          <svg class="h-4 w-4 text-[#8E94A4] rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
                       </div>
-                      <div class="text-[10px] text-nv-muted">Simulated from 2,500 respondents · Male 25–40 · EU market</div>
+
+                      <!-- Demographics -->
+                      <div class="rounded-xl border border-[#E4E8F0] bg-[#F9FAFB] p-3">
+                        <div class="text-[10px] font-semibold text-[#1A1D26] mb-1.5">Demographics</div>
+                        <div class="flex flex-wrap gap-x-4 gap-y-0.5 text-[10px] text-[#8E94A4]">
+                          <span><span class="font-medium text-[#5A6070]">Age:</span> 25-34, 35-44</span>
+                          <span><span class="font-medium text-[#5A6070]">Income:</span> Average, Above Average</span>
+                          <span><span class="font-medium text-[#5A6070]">Education:</span> Bachelor's, Master's</span>
+                        </div>
+                      </div>
+
+                      <!-- Questionnaire info -->
+                      <div class="rounded-xl border border-[#E4E8F0] bg-[#F9FAFB] p-3">
+                        <div class="text-[10px] font-semibold text-[#1A1D26] mb-1">Questionnaire: Brand Perception</div>
+                        <p class="text-[10px] text-[#8E94A4] mb-2 leading-relaxed">Measures trust, professionalism, and perceived identity of the brand behind the design.</p>
+                        <ul class="space-y-1">
+                          <li class="flex items-start gap-1.5 text-[10px]"><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px font-mono text-[9px] text-[#8E94A4]">BP1</span><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px text-[9px] text-[#8E94A4]">Scale 1–5</span><span class="text-[#5A6070]">This design makes the brand seem trustworthy.</span></li>
+                          <li class="flex items-start gap-1.5 text-[10px]"><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px font-mono text-[9px] text-[#8E94A4]">BP2</span><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px text-[9px] text-[#8E94A4]">Scale 1–5</span><span class="text-[#5A6070]">The design gives me confidence in the brand's professionalism.</span></li>
+                          <li class="flex items-start gap-1.5 text-[10px]"><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px font-mono text-[9px] text-[#8E94A4]">BP5</span><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px text-[9px] text-[#8E94A4]">Scale 1–5</span><span class="text-[#5A6070]">I would consider buying a product from this brand.</span></li>
+                          <li class="flex items-start gap-1.5 text-[10px]"><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px font-mono text-[9px] text-[#8E94A4]">BP6</span><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px text-[9px] text-[#8E94A4]">Choice</span><span class="text-[#5A6070]">Which brand personality fits this design? <span class="text-[#8E94A4]">(Sincere, Exciting, Competent, Sophisticated, Rugged)</span></span></li>
+                          <li class="flex items-start gap-1.5 text-[10px]"><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px font-mono text-[9px] text-[#8E94A4]">BP8</span><span class="shrink-0 rounded bg-[#EEF0F6] px-1 py-px text-[9px] text-[#8E94A4]">Open</span><span class="text-[#5A6070]">Describe the brand in one word, based on this design.</span></li>
+                        </ul>
+                      </div>
+
+                      <!-- Report -->
+                      <div class="rounded-xl border border-[#E4E8F0] bg-[#F9FAFB] p-3">
+                        <div class="text-[10px] font-semibold text-[#1A1D26] mb-1.5">Report</div>
+                        <div class="text-[10px] leading-relaxed text-[#5A6070] space-y-1.5">
+                          <p>The Zephyr Vision ad scores high on <strong class="text-[#1A1D26]">trustworthiness</strong> (M=4.31, SD=0.72) and <strong class="text-[#1A1D26]">professionalism</strong> (M=4.48, SD=0.61). The dominant brand personality is <strong class="text-[#1A1D26]">Sophisticated</strong> (42.1%) followed by Competent (28.7%). 81.3% perceive the brand as innovative.</p>
+                          <p><strong class="text-[#1A1D26]">Purchase intent is the weakest metric</strong> (M=3.28, SD=1.04) — respondents trust the brand but lack a clear next step. Open-ended responses frequently cite <em>"sleek"</em> and <em>"futuristic"</em>, but several note <em>"I don't know what to do next"</em>.</p>
+                        </div>
+                      </div>
+
+                      <!-- Raw responses (mini table) -->
+                      <div class="rounded-xl border border-[#E4E8F0] bg-[#F9FAFB] p-3">
+                        <div class="text-[10px] font-semibold text-[#1A1D26] mb-1.5">Raw Responses (2500)</div>
+                        <div class="overflow-hidden rounded-lg border border-[#E4E8F0]">
+                          <table class="w-full text-[9px]">
+                            <thead>
+                              <tr class="border-b border-[#E4E8F0] bg-white text-left text-[#8E94A4]">
+                                <th class="px-1.5 py-1 font-medium">Age</th>
+                                <th class="px-1.5 py-1 font-medium">Income</th>
+                                <th class="px-1.5 py-1 font-medium">BP1</th>
+                                <th class="px-1.5 py-1 font-medium">BP2</th>
+                                <th class="px-1.5 py-1 font-medium">BP5</th>
+                                <th class="px-1.5 py-1 font-medium">BP6</th>
+                                <th class="px-1.5 py-1 font-medium">BP8</th>
+                              </tr>
+                            </thead>
+                            <tbody class="text-[#5A6070]">
+                              <tr class="border-b border-[#E4E8F0]/50"><td class="px-1.5 py-1">25-34</td><td class="px-1.5 py-1">Above Avg</td><td class="px-1.5 py-1">5</td><td class="px-1.5 py-1">4</td><td class="px-1.5 py-1">3</td><td class="px-1.5 py-1">Sophisticated</td><td class="px-1.5 py-1">Premium</td></tr>
+                              <tr class="border-b border-[#E4E8F0]/50"><td class="px-1.5 py-1">35-44</td><td class="px-1.5 py-1">Average</td><td class="px-1.5 py-1">4</td><td class="px-1.5 py-1">5</td><td class="px-1.5 py-1">4</td><td class="px-1.5 py-1">Competent</td><td class="px-1.5 py-1">Reliable</td></tr>
+                              <tr><td class="px-1.5 py-1">25-34</td><td class="px-1.5 py-1">Above Avg</td><td class="px-1.5 py-1">4</td><td class="px-1.5 py-1">4</td><td class="px-1.5 py-1">2</td><td class="px-1.5 py-1">Sophisticated</td><td class="px-1.5 py-1">Sleek</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
                   <!-- Generate overlay -->
-                  <div id="heroOverlayGenerate" class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none">
-                    <div class="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
-                    <div class="relative w-[85%] space-y-3 rounded-xl bg-white p-5 shadow-lg border border-nv-border">
-                      <div class="text-xs font-semibold text-nv-blue">Generated Improvements</div>
-                      <div class="text-sm font-bold text-nv-ink">Suggested optimisations</div>
-                      <div class="space-y-2 text-xs text-nv-muted">
-                        <div class="flex gap-2 rounded-lg bg-nv-bg p-2.5"><span class="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-nv-blue"></span><span><strong class="text-nv-ink">Move headline left</strong> — aligns with natural reading flow, increases first-fixation probability by ~18%</span></div>
-                        <div class="flex gap-2 rounded-lg bg-nv-bg p-2.5"><span class="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-nv-blue"></span><span><strong class="text-nv-ink">Increase CTA contrast</strong> — "Shop Now" button competes with background, needs higher luminance delta</span></div>
-                        <div class="flex gap-2 rounded-lg bg-nv-bg p-2.5"><span class="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-nv-blue"></span><span><strong class="text-nv-ink">Simplify feature list</strong> — 3 bullet points create cognitive overload in peripheral zone</span></div>
-                      </div>
-                      <div class="flex gap-2 pt-1">
-                        <div class="rounded-full bg-nv-blue px-3 py-1.5 text-[10px] font-semibold text-white">Generate variant</div>
-                        <div class="rounded-full border border-nv-border px-3 py-1.5 text-[10px] font-semibold text-nv-ink">Export report</div>
-                      </div>
-                    </div>
+                  <div id="heroOverlayGenerate" class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    <img src="assets/hero-optimised.webp" alt="Optimised variant — Zephyr Vision" class="w-full h-full object-cover" />
+                    <div class="absolute top-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-semibold text-white">Generated Variant</div>
                   </div>
                 </div>
               </div>
@@ -445,10 +493,46 @@
     const heroOverlays = ["heroOverlayAttention", "heroOverlaySurvey", "heroOverlayGenerate"];
     let activeTab = "heroOverlayAttention";
 
+    function activateTab(target) {
+      activeTab = target;
+      heroOverlays.forEach(function (id) {
+        document.getElementById(id).classList.add("opacity-0");
+      });
+      document.getElementById(target).classList.remove("opacity-0");
+      heroTabs.forEach(function (t) {
+        if (t.dataset.target === target) {
+          t.classList.remove("border-nv-border", "border", "bg-white", "text-nv-ink");
+          t.classList.add("border-nv-blue", "border-2", "bg-nv-blue/5", "text-nv-blue");
+        } else {
+          t.classList.remove("border-nv-blue", "border-2", "bg-nv-blue/5", "text-nv-blue");
+          t.classList.add("border-nv-border", "border", "bg-white", "text-nv-ink");
+        }
+      });
+    }
+
+    // Start with clean image, no overlay active
+    activeTab = null;
+    heroTabs.forEach(function (t) {
+      t.classList.remove("border-nv-blue", "border-2", "bg-nv-blue/5", "text-nv-blue");
+      t.classList.add("border-nv-border", "border", "bg-white", "text-nv-ink");
+    });
+
+    // Auto-cycle: starts after 2s, then every 4s
+    var cycleIndex = -1;
+    var autoInterval = setTimeout(function () {
+      function cycle() {
+        cycleIndex = (cycleIndex + 1) % heroOverlays.length;
+        activateTab(heroOverlays[cycleIndex]);
+      }
+      cycle();
+      autoInterval = setInterval(cycle, 4000);
+    }, 2000);
+
     heroTabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
+        clearTimeout(autoInterval);
+        clearInterval(autoInterval);
         var target = tab.dataset.target;
-        // Toggle: if clicking the active one, deactivate it (show original image)
         if (activeTab === target) {
           document.getElementById(target).classList.add("opacity-0");
           activeTab = null;
@@ -458,28 +542,9 @@
           });
           return;
         }
-        activeTab = target;
-        // Hide all overlays
-        heroOverlays.forEach(function (id) {
-          document.getElementById(id).classList.add("opacity-0");
-        });
-        // Show selected
-        document.getElementById(target).classList.remove("opacity-0");
-        // Style tabs
-        heroTabs.forEach(function (t) {
-          if (t.dataset.target === target) {
-            t.classList.remove("border-nv-border", "border", "bg-white", "text-nv-ink");
-            t.classList.add("border-nv-blue", "border-2", "bg-nv-blue/5", "text-nv-blue");
-          } else {
-            t.classList.remove("border-nv-blue", "border-2", "bg-nv-blue/5", "text-nv-blue");
-            t.classList.add("border-nv-border", "border", "bg-white", "text-nv-ink");
-          }
-        });
+        activateTab(target);
       });
     });
-
-    // Show heatmap by default
-    document.getElementById("heroOverlayAttention").classList.remove("opacity-0");
   </script>
 </body>
 </html>
